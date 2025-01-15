@@ -21,6 +21,14 @@ class BookSeeder extends Seeder
             'synopsis' => 'Una historia épica de la familia Buendía en el pueblo ficticio de Macondo.', 
             'published_at' => '1967-05-30' 
         ]); 
+
+        Book::create([ 
+            'title' => 'El Amor en los Tiempos del Cólera', 
+            'author' => 'Gabriel García Márquez', 
+            'category' => 'Romance', 
+            'synopsis' => 'Una historia de amor entre Fermina Daza y Florentino Ariza, que se desarrolla a lo largo de varias décadas.', 
+            'published_at' => '1985-10-05' 
+        ]); 
         
         Book::create([ 
             'title' => '1984', 
@@ -52,6 +60,14 @@ class BookSeeder extends Seeder
             'category' => 'Drama', 
             'synopsis' => 'Un poderoso relato sobre la justicia y el racismo en el sur de Estados Unidos.', 
             'published_at' => '1960-07-11'
+        ]);
+
+        Book::create([ 
+            'title' => 'Posdata: Te Amo', 
+            'author' => 'Cecelia Ahern', 
+            'category' => 'Romance', 
+            'synopsis' => 'Una conmovedora historia sobre el amor y la pérdida, centrada en una joven viuda que recibe cartas de su difunto esposo.', 
+            'published_at' => '2004-01-01'
         ]);
     }
 }

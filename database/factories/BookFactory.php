@@ -21,7 +21,6 @@ class BookFactory extends Factory
     public function definition()
     {
         return [
-            //
             'title' => $this->faker->sentence, //random name for the author.
             'author' => $this->faker->name, //random name for the author
             'category' => $this->faker->word, //random word for the category

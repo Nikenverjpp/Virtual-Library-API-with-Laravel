@@ -16,6 +16,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        // Create an admin user
         $admin = User::create([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
@@ -23,6 +24,7 @@ class UserSeeder extends Seeder
             'is_admin' => true,
         ]);
 
+        // Create an access personal token for the admin user
         PersonalAccessToken::create([ 
             'tokenable_id' => $admin->id, 
             'tokenable_type' => 'App\Models\User', 
@@ -31,6 +33,7 @@ class UserSeeder extends Seeder
             'abilities' => ['*'],
         ]);
 
+        // Create a regular user
         $user = User::create([
             'name' => 'user',
             'email' => 'user@gmail.com',
@@ -38,6 +41,7 @@ class UserSeeder extends Seeder
             'is_admin' => false,
         ]);
 
+        // Create an access personal token for the regular user
         PersonalAccessToken::create([ 
             'tokenable_id' => $user->id, 
             'tokenable_type' => 'App\Models\User', 
